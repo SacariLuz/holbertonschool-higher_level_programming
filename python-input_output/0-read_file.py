@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""Definimos una función read_file"""
+"""Defines read_file a function"""
 
 
 def read_file(filename=""):
-    """Usamos el open para abrir el archivo"""
-    with open(filename) as m:
-        txt = m.read()
+    """Print the contents of text file"""
+    with open(filename) as f:
+        txt = f.read()
         print(txt, end="")
