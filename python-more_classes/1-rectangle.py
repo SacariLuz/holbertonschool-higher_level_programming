@@ -6,23 +6,23 @@ class Rectangle:
     """Esta clase expone un Rectangle."""
 
     def __init__(self, width=0, height=0):
-        """Método constructor, tiene 2 parámetros opcionales.
+        """Inicialize new rectangle, 2 optional parameters.
 
         Args:
-            width (int): El ancho del Rectangle.
-            height (int): El alto del Rectangle.
+            width (int): width of Rectangle.
+            height (int): height of Rectangle.
         """
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        """Este método retorna el ancho de nuestro Rectangle"""
+        """Return height of the Rectangle"""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """Este propiedad configura el ancho"""
+        """Get width"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -31,12 +31,12 @@ class Rectangle:
 
     @property
     def height(self):
-        """Este método retorna el alto de  nuestro Rectangle."""
+        """Return height of the Rectangle."""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """Esta propiedad configura el alto"""
+        """Get height"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
