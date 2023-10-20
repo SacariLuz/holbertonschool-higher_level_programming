@@ -1,41 +1,42 @@
 #!/usr/bin/python3
-"""Defines class rectangle"""
+"""Este módulo define la clase Rectangle."""
 
 
 class Rectangle:
-    """Represent a rectagle."""
+    """Esta clase expone un Rectangle."""
+
     def __init__(self, width=0, height=0):
-        """
-        Inicializes new rectagle
+        """Método constructor, tiene 2 parámetros opcionales.
+
         Args:
-        width (int):the new rectangle
-        height (int):of the new rectangle
+            width (int): El ancho del Rectangle.
+            height (int): El alto del Rectangle.
         """
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        """return width of the rectangle"""
+        """Este método retorna el ancho de nuestro Rectangle"""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """Get width of the rectangle"""
+        """Este propiedad configura el ancho"""
         if not isinstance(value, int):
-            raise TypeError("width must be a integer")
+            raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
 
     @property
     def height(self):
-        """return height of the rectangle"""
+        """Este método retorna el alto de  nuestro Rectangle."""
         return self.__height
 
-    @width.setter
+    @height.setter
     def height(self, value):
-        """get height of the rectangle"""
+        """Esta propiedad configura el alto"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
