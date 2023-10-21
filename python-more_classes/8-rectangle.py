@@ -76,7 +76,6 @@ class Rectangle:
     def __repr__(self):
         """
         return the string representation of rectangle
-
         return:
         string: represent the rectangle
         """
@@ -99,13 +98,9 @@ class Rectangle:
          rectangle_1:instance of rectangles class
          rectangle_2:instance of rectangles class
 
-         Raise:
          TypeError: if not instance of rectangle class
-         
-         Return:
-         Rectangle_1:return the instance with more area
-         """
 
+         Rectangle_1:return the instance with more area"""
          if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
 
