@@ -1,0 +1,77 @@
+Este archivo contiene los test para BaseGeometry
+
+#Importación de la clase BaseGeometry.
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+#Instancia de clase BaseGeometry.
+>>> bg = BaseGeometry()
+
+#Llamando al método area()
+>>> bg.area()
+Traceback (most recent call last):
+    ...
+Exception: area() is not implemented
+
+#Pasando diferentes tipos de datos
+>>> bg.integer_validator(None, None)
+Traceback (most recent call last):
+    ...
+TypeError: None must be an integer
+
+>>> bg.integer_validator()
+Traceback (most recent call last):
+    ...
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+>>> bg.integer_validator('edad', 1.5)
+Traceback (most recent call last):
+    ...
+TypeError: edad must be an integer
+
+>>> bg.integer_validator('edad', 18)
+
+>>> bg.integer_validator('edad', 'jola')
+Traceback (most recent call last):
+    ...
+TypeError: edad must be an integer
+
+>>> bg.integer_validator('edad', -6)
+Traceback (most recent call last):
+    ...
+ValueError: edad must be greater than 0
+
+>>> bg.integer_validator('altura', 0)
+Traceback (most recent call last):
+    ...
+ValueError: altura must be greater than 0
+
+>>> bg.integer_validator(None,4)
+
+>>> bg.integer_validator(None)
+Traceback (most recent call last):
+    ...
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+>>> bg.integer_validator('verdadero', True)
+Traceback (most recent call last):
+    ...
+TypeError: verdadero must be an integer
+
+>>> bg.integer_validator(8, 8)
+
+>>> bg.integer_validator('lista invalida', [4])
+Traceback (most recent call last):
+    ...
+TypeError: lista invalida must be an integer
+
+>>> bg.integer_validator('tupla?', (4))
+
+>>> bg.integer_validator('otra tupla?', (4,))
+Traceback (most recent call last):
+    ...
+TypeError: otra tupla? must be an integer
+
+>>> bg.integer_validator('un set', {9})
+Traceback (most recent call last):
+    ...
+TypeError: un set must be an integer
