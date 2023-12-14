@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ scrip que filtra los valores en la tabla de estados de hbtn_0e_0_usa"""
 
-    import sys
+import sys
 import MySQLdb
 
 if __name__ == "__main__":
